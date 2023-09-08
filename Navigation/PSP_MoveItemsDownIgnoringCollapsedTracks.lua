@@ -1,12 +1,10 @@
 --[[
 @author Luke Willis
-@version 1.0
+@version 1.1
 @licence GPL v3
 @reaper 6.81
 @changelog
-
-Changelog:
-    Release
+    - release
 --]]
 
 local r = reaper
@@ -49,12 +47,18 @@ local function tryMoveMediaItem(mediaItem)
     local mediaItemTrackIndex = r.GetMediaTrackInfo_Value(mediaItemTrack, "IP_TRACKNUMBER")
     local i = mediaItemTrackIndex - 1 -- make it zero based
     while i < r.CountTracks(PROJECT) do
+        -- if on last track of project, create new one
+        if i == r.CountTracks(PROJECT) - 1 then
+            local newTrackIndex = r.CountTracks(PROJECT)
+            r.InsertTrackAtIndex(newTrackIndex, true)
+        end
+
         local searchTrack = r.GetTrack(PROJECT, i + 1)
         if searchTrack then
             if isValidSelection(searchTrack, mediaItem) then
                 r.MoveMediaItemToTrack(mediaItem, searchTrack)
                 r.TrackList_AdjustWindows(true)
-                return true
+                return
             end
         end
         i = i + 1

@@ -4,9 +4,7 @@
 @licence GPL v3
 @reaper 6.81
 @changelog
-
-Changelog:
-    Release
+    - release
 --]]
 
 local r = reaper
