@@ -1,6 +1,6 @@
 --[[
 @author: Luke Willis
-@version: v1.0
+@version: 1.0
 @licence: GPL v3
 @reaper: 6.81
 --]]
