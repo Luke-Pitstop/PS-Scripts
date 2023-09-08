@@ -12,6 +12,7 @@ local PROJECT = 0
 
 local function isValidSelection(track)
     local isTrackAlreadySelected = r.IsTrackSelected(track)
+
     if isTrackAlreadySelected then
         return false
     end
@@ -55,9 +56,11 @@ end
 -----------------------------------------------------------------------
 
 local function tryAdjustSelection()
-    for i = 0, r.CountSelectedTracks(PROJECT) - 1 do
+    local i = r.CountSelectedTracks(PROJECT) - 1
+    while i >= 0 do
         local track = r.GetSelectedTrack(PROJECT, i)
         tryMoveTrackSelection(track)
+        i = i - 1
     end
 end
 
