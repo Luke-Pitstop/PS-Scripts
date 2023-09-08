@@ -37,7 +37,7 @@ end
 local function tryMoveTrackSelection(trackToMove)
     local trackToMoveIndex = r.GetMediaTrackInfo_Value(trackToMove, "IP_TRACKNUMBER")
     local i = trackToMoveIndex - 1 -- make it zero based
-    -- ascend tracks upwards to check for valid tracks to select
+    -- ascend tracks downwards to check for valid tracks to select
     while i < r.CountTracks(PROJECT) do
         local searchTrack = r.GetTrack(PROJECT, i + 1)
         if searchTrack then
