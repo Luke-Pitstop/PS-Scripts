@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Pitstop Reaper Scripts" commit="43866df3b136962c7a405519ece8c53869d7dba7">
+<index version="1" name="Pitstop Reaper Scripts" commit="12ffd5dd29de4ff937d542696cd830ba0eee5f70">
   <category name="Navigation">
     <reapack name="PSP_MoveItemsDownIgnoringCollapsedTracks.lua" type="script">
       <version name="1.1" author="Luke Willis" time="2023-09-08T14:58:37Z">
@@ -11,6 +11,10 @@
       <version name="1.0" author="Luke Willis" time="2023-09-08T14:58:37Z">
         <changelog><![CDATA[- release]]></changelog>
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/43866df3b136962c7a405519ece8c53869d7dba7/Navigation/PSP_MoveItemsUpIgnoringCollapsedTracks.lua</source>
+      </version>
+      <version name="1.1" author="Luke Willis" time="2023-09-08T15:33:31Z">
+        <changelog><![CDATA[- added check to see if item was on top track to avoid track bunching]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/12ffd5dd29de4ff937d542696cd830ba0eee5f70/Navigation/PSP_MoveItemsUpIgnoringCollapsedTracks.lua</source>
       </version>
     </reapack>
     <reapack name="PSP_MoveSelectionDownIgnoringCollapsedTracks.lua" type="script">
