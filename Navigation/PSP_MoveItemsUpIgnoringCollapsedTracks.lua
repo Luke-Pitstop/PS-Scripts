@@ -1,14 +1,15 @@
 --[[
 @author Luke Willis
-@version 1.0
+@version 1.1
 @licence GPL v3
 @reaper 6.81
 @changelog
-    - release
+    - added check to see if item was on top track to avoid track bunching
 --]]
 
 local r = reaper
 local PROJECT = 0
+local hitTopTrack = false
 
 -----------------------------------------------------------------------
 
@@ -25,7 +26,7 @@ local function isValidSelection(track, mediaItem)
             return false -- track is collapsed
         end
     end
-    
+
     -- don't move the item if an item exists on the track at the same position
     local mediaItemPos = r.GetMediaItemInfo_Value(mediaItem, "D_POSITION")
     for i = 0, r.CountTrackMediaItems(track) do
@@ -38,6 +39,14 @@ local function isValidSelection(track, mediaItem)
         end
     end
     return true
+end
+
+-----------------------------------------------------------------------
+
+local function isItemOnTopTrack(mediaItem)
+    local mediaItemTrack = r.GetMediaItemTrack(mediaItem)
+    local mediaItemTrackIndex = r.GetMediaTrackInfo_Value(mediaItemTrack, "IP_TRACKNUMBER")
+    return mediaItemTrackIndex <= 1
 end
 
 -----------------------------------------------------------------------
@@ -64,6 +73,7 @@ end
 local function tryMoveSelection()
     for i = 0, r.CountSelectedMediaItems(PROJECT) - 1 do
         local mediaItem = r.GetSelectedMediaItem(PROJECT, i)
+        if isItemOnTopTrack(mediaItem) then return end
         tryMoveMediaItem(mediaItem)
     end
 end
