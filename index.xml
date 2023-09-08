@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Pitstop Reaper Scripts" commit="e81771d78f3ab240244aa06259bd0b55bcfce1b5">
+<index version="1" name="Pitstop Reaper Scripts" commit="8a79829aa50fc600903ada68f7e641725d385073">
+  <category name="Navigation">
+    <reapack name="PSP_MoveSelectionDownIgnoringCollapsedTracks.lua" type="script">
+      <version name="1.0" author="Luke Willis" time="2023-09-08T12:26:29Z">
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/8a79829aa50fc600903ada68f7e641725d385073/Navigation/PSP_MoveSelectionDownIgnoringCollapsedTracks.lua</source>
+      </version>
+    </reapack>
+    <reapack name="PSP_MoveSelectionUpIgnoringCollapsedTracks.lua" type="script">
+      <version name="1.0" author="Luke Willis" time="2023-09-08T12:26:29Z">
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/8a79829aa50fc600903ada68f7e641725d385073/Navigation/PSP_MoveSelectionUpIgnoringCollapsedTracks.lua</source>
+      </version>
+    </reapack>
+  </category>
   <metadata>
     <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
