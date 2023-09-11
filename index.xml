@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Pitstop Reaper Scripts" commit="4bfc9a2297d667097b4dc7fd27992764c9711603">
+<index version="1" name="Pitstop Reaper Scripts" commit="771fd73f05ca74f60b3d3197d706d16318c92831">
   <category name="Navigation">
     <reapack name="PSP_DuplicateItemsDownIgnoringCollapsedTracks.lua" type="script">
       <metadata>
@@ -76,6 +76,10 @@
       <version name="1.1" author="Luke Willis" time="2023-09-08T13:29:48Z">
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/467c89ae721d78007a2ab131286937b3f74d57bf/Navigation/PSP_MoveSelectionDownIgnoringCollapsedTracks.lua</source>
       </version>
+      <version name="1.2" author="Luke Willis" time="2023-09-11T15:42:13Z">
+        <changelog><![CDATA[updated mixer scroll when new tracks are selected]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/771fd73f05ca74f60b3d3197d706d16318c92831/Navigation/PSP_MoveSelectionDownIgnoringCollapsedTracks.lua</source>
+      </version>
     </reapack>
     <reapack name="PSP_MoveSelectionUpIgnoringCollapsedTracks.lua" type="script">
       <version name="1.0" author="Luke Willis" time="2023-09-08T12:26:29Z">
@@ -83,6 +87,10 @@
       </version>
       <version name="1.1" author="Luke Willis" time="2023-09-08T13:29:48Z">
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/467c89ae721d78007a2ab131286937b3f74d57bf/Navigation/PSP_MoveSelectionUpIgnoringCollapsedTracks.lua</source>
+      </version>
+      <version name="1.2" author="Luke Willis" time="2023-09-11T15:42:13Z">
+        <changelog><![CDATA[updated mixer scroll when new tracks are selected]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/771fd73f05ca74f60b3d3197d706d16318c92831/Navigation/PSP_MoveSelectionUpIgnoringCollapsedTracks.lua</source>
       </version>
     </reapack>
   </category>
