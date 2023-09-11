@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Pitstop Reaper Scripts" commit="9762bc998a291edcc290640f7204c184009ecea9">
+<index version="1" name="Pitstop Reaper Scripts" commit="4bfc9a2297d667097b4dc7fd27992764c9711603">
   <category name="Navigation">
+    <reapack name="PSP_DuplicateItemsDownIgnoringCollapsedTracks.lua" type="script">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Tries to duplicate items down to a track that is not collapsed or hidden\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Luke Willis" time="2023-09-11T15:05:10Z">
+        <changelog><![CDATA[release]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/4bfc9a2297d667097b4dc7fd27992764c9711603/Navigation/PSP_DuplicateItemsDownIgnoringCollapsedTracks.lua</source>
+      </version>
+    </reapack>
+    <reapack name="PSP_DuplicateItemsUpIgnoringCollapsedTracks.lua" type="script">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Tries to duplicate items down to a track that is not collapsed or hidden\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Luke Willis" time="2023-09-11T15:05:10Z">
+        <changelog><![CDATA[release]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/4bfc9a2297d667097b4dc7fd27992764c9711603/Navigation/PSP_DuplicateItemsUpIgnoringCollapsedTracks.lua</source>
+      </version>
+    </reapack>
     <reapack name="PSP_MoveItemsDownIgnoringCollapsedTracks.lua" type="script">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -53,6 +83,38 @@
       </version>
       <version name="1.1" author="Luke Willis" time="2023-09-08T13:29:48Z">
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/467c89ae721d78007a2ab131286937b3f74d57bf/Navigation/PSP_MoveSelectionUpIgnoringCollapsedTracks.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Track Management">
+    <reapack name="PSP_ToggleAllFolderTracks.lua" type="script">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 shows or hides all folder tracks in project\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Luke Willis" time="2023-09-11T15:05:10Z">
+        <changelog><![CDATA[release]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/4bfc9a2297d667097b4dc7fd27992764c9711603/Track%20Management/PSP_ToggleAllFolderTracks.lua</source>
+      </version>
+    </reapack>
+    <reapack name="PSP_ToggleTrackChildrenVisibility.lua" type="script">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Tries to duplicate items down to a track that is not collapsed or hidden\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Luke Willis" time="2023-09-11T15:05:10Z">
+        <changelog><![CDATA[release]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/4bfc9a2297d667097b4dc7fd27992764c9711603/Track%20Management/PSP_ToggleTrackChildrenVisibility.lua</source>
       </version>
     </reapack>
   </category>
