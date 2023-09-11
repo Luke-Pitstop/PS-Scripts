@@ -2,13 +2,27 @@
 @author Luke Willis
 @version 1.1
 @licence GPL v3
-@reaper 6.81
-@changelog
-    - release
+@reaper 6.82
+@changelog added threshold to stop overlapping positions
+@about Tries to move items down to a track that is not collapsed or hidden
 --]]
+
+--[[ SETTINGS ]] --
+
+    local overlapThresholdSeconds = 0.5
+
+--[[ MAIN ]] --
 
 local r = reaper
 local PROJECT = 0
+
+-----------------------------------------------------------------------
+
+local function isMoveLocationWithinThreshold(startingPos, targetMediaItem)
+    local targetStartPos = r.GetMediaItemInfo_Value(targetMediaItem, "D_POSITION")
+    local overlapAmount = (startingPos + overlapThresholdSeconds) - (targetStartPos + overlapThresholdSeconds)
+    return overlapAmount > overlapThresholdSeconds or overlapAmount < (overlapThresholdSeconds * -1)
+end
 
 -----------------------------------------------------------------------
 
@@ -31,8 +45,7 @@ local function isValidSelection(track, mediaItem)
     for i = 0, r.CountTrackMediaItems(track) do
         local searchItem = r.GetTrackMediaItem(track, i)
         if searchItem then
-            local searchItemPos = r.GetMediaItemInfo_Value(searchItem, "D_POSITION")
-            if mediaItemPos == searchItemPos then
+            if not isMoveLocationWithinThreshold(mediaItemPos, searchItem) then
                 return false
             end
         end
@@ -57,7 +70,6 @@ local function tryMoveMediaItem(mediaItem)
         if searchTrack then
             if isValidSelection(searchTrack, mediaItem) then
                 r.MoveMediaItemToTrack(mediaItem, searchTrack)
-                r.TrackList_AdjustWindows(true)
                 return
             end
         end
@@ -74,6 +86,7 @@ local function tryMoveSelection()
         tryMoveMediaItem(mediaItem)
         i = i - 1
     end
+    r.TrackList_AdjustWindows(true)
 end
 
 -----------------------------------------------------------------------

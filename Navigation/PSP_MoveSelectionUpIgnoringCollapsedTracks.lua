@@ -2,9 +2,8 @@
 @author Luke Willis
 @version 1.1
 @licence GPL v3
-@reaper 6.81
-@changelog
-    - release
+@reaper 6.82
+@changelog updated mixer scroll when new tracks are selected
 --]]
 
 local r = reaper
@@ -60,6 +59,9 @@ local function tryAdjustSelection()
     for i = 0, r.CountSelectedTracks(PROJECT) - 1 do
         local track = r.GetSelectedTrack(PROJECT, i)
         tryMoveTrackSelection(track)
+    end
+    if r.CountSelectedTracks(PROJECT) > 0 then
+        r.SetMixerScroll(r.GetSelectedTrack(PROJECT, 0))
     end
 end
 
