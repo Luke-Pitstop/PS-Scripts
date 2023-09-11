@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Pitstop Reaper Scripts" commit="12ffd5dd29de4ff937d542696cd830ba0eee5f70">
+<index version="1" name="Pitstop Reaper Scripts" commit="9762bc998a291edcc290640f7204c184009ecea9">
   <category name="Navigation">
     <reapack name="PSP_MoveItemsDownIgnoringCollapsedTracks.lua" type="script">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Tries to move items down to a track that is not collapsed or hidden\par}
+}
+]]></description>
+      </metadata>
       <version name="1.1" author="Luke Willis" time="2023-09-08T14:58:37Z">
         <changelog><![CDATA[- release]]></changelog>
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/43866df3b136962c7a405519ece8c53869d7dba7/Navigation/PSP_MoveItemsDownIgnoringCollapsedTracks.lua</source>
       </version>
     </reapack>
     <reapack name="PSP_MoveItemsUpIgnoringCollapsedTracks.lua" type="script">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Tries to move items down to a track that is not collapsed or hidden\par}
+}
+]]></description>
+      </metadata>
       <version name="1.0" author="Luke Willis" time="2023-09-08T14:58:37Z">
         <changelog><![CDATA[- release]]></changelog>
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/43866df3b136962c7a405519ece8c53869d7dba7/Navigation/PSP_MoveItemsUpIgnoringCollapsedTracks.lua</source>
@@ -15,6 +33,10 @@
       <version name="1.1" author="Luke Willis" time="2023-09-08T15:33:31Z">
         <changelog><![CDATA[- added check to see if item was on top track to avoid track bunching]]></changelog>
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/12ffd5dd29de4ff937d542696cd830ba0eee5f70/Navigation/PSP_MoveItemsUpIgnoringCollapsedTracks.lua</source>
+      </version>
+      <version name="1.2" author="Luke Willis" time="2023-09-11T14:49:47Z">
+        <changelog><![CDATA[added threshold to stop overlapping positions]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/9762bc998a291edcc290640f7204c184009ecea9/Navigation/PSP_MoveItemsUpIgnoringCollapsedTracks.lua</source>
       </version>
     </reapack>
     <reapack name="PSP_MoveSelectionDownIgnoringCollapsedTracks.lua" type="script">
