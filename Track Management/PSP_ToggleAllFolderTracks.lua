@@ -3,7 +3,7 @@
 @version 1.0
 @licence GPL v3
 @reaper 6.82
-@changelog
+@changelog release
 @about shows or hides all folder tracks in project
 --]]
 

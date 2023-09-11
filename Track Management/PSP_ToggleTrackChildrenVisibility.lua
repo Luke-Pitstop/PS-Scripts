@@ -3,7 +3,7 @@
 @version 1.0
 @licence GPL v3
 @reaper 6.82
-@changelog
+@changelog release
 @about Tries to duplicate items down to a track that is not collapsed or hidden
 --]]
 
