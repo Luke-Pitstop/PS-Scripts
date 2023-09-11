@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Pitstop Reaper Scripts" commit="fdbd2cfd18e429983e0716d6fa5fbcb0f93a47d3">
+<index version="1" name="Pitstop Reaper Scripts" commit="310b69a78c2766796e505ec6ef749168dac1038f">
   <category name="Navigation">
     <reapack name="PSP_DuplicateItemsDownIgnoringCollapsedTracks.lua" type="script">
       <metadata>
@@ -131,6 +131,10 @@
       <version name="1.0" author="Luke Willis" time="2023-09-11T15:05:10Z">
         <changelog><![CDATA[release]]></changelog>
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/4bfc9a2297d667097b4dc7fd27992764c9711603/Track%20Management/PSP_ToggleTrackChildrenVisibility.lua</source>
+      </version>
+      <version name="1.1" author="Luke Willis" time="2023-09-11T16:09:32Z">
+        <changelog><![CDATA[fixed issue where it was referencing incorrect index]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/310b69a78c2766796e505ec6ef749168dac1038f/Track%20Management/PSP_ToggleTrackChildrenVisibility.lua</source>
       </version>
     </reapack>
   </category>
