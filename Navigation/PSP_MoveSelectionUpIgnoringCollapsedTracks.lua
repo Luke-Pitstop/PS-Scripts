@@ -1,6 +1,6 @@
 --[[
 @author Luke Willis
-@version 1.1
+@version 1.2
 @licence GPL v3
 @reaper 6.82
 @changelog updated mixer scroll when new tracks are selected
