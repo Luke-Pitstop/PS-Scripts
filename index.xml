@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Pitstop Reaper Scripts" commit="771fd73f05ca74f60b3d3197d706d16318c92831">
+<index version="1" name="Pitstop Reaper Scripts" commit="fdbd2cfd18e429983e0716d6fa5fbcb0f93a47d3">
   <category name="Navigation">
     <reapack name="PSP_DuplicateItemsDownIgnoringCollapsedTracks.lua" type="script">
       <metadata>
@@ -45,6 +45,10 @@
         <changelog><![CDATA[- release]]></changelog>
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/43866df3b136962c7a405519ece8c53869d7dba7/Navigation/PSP_MoveItemsDownIgnoringCollapsedTracks.lua</source>
       </version>
+      <version name="1.2" author="Luke Willis" time="2023-09-11T15:51:24Z">
+        <changelog><![CDATA[moved visual update to end of script]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/fdbd2cfd18e429983e0716d6fa5fbcb0f93a47d3/Navigation/PSP_MoveItemsDownIgnoringCollapsedTracks.lua</source>
+      </version>
     </reapack>
     <reapack name="PSP_MoveItemsUpIgnoringCollapsedTracks.lua" type="script">
       <metadata>
@@ -67,6 +71,10 @@
       <version name="1.2" author="Luke Willis" time="2023-09-11T14:49:47Z">
         <changelog><![CDATA[added threshold to stop overlapping positions]]></changelog>
         <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/9762bc998a291edcc290640f7204c184009ecea9/Navigation/PSP_MoveItemsUpIgnoringCollapsedTracks.lua</source>
+      </version>
+      <version name="1.3" author="Luke Willis" time="2023-09-11T15:51:24Z">
+        <changelog><![CDATA[moved visual update to end of script]]></changelog>
+        <source main="main">https://github.com/Luke-Pitstop/PS-Scripts/raw/fdbd2cfd18e429983e0716d6fa5fbcb0f93a47d3/Navigation/PSP_MoveItemsUpIgnoringCollapsedTracks.lua</source>
       </version>
     </reapack>
     <reapack name="PSP_MoveSelectionDownIgnoringCollapsedTracks.lua" type="script">
