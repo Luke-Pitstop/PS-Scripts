@@ -34,7 +34,6 @@ local function updateChildrenVisiblity(parent, newState)
         if searchTrackDepth ~= (parentDepth + 1) then
             r.SetMediaTrackInfo_Value(searchTrack, "B_SHOWINTCP", newState)
             r.SetMediaTrackInfo_Value(searchTrack, "B_SHOWINMIXER", newState)
-            r.ShowConsoleMsg(tostring(newState) .. "\n")
         end
     end
 end
