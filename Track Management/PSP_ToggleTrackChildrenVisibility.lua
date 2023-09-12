@@ -1,9 +1,9 @@
 --[[
 @author Luke Willis
-@version 1.2
+@version 1.3
 @licence GPL v3
 @reaper 6.82
-@changelog updated about
+@changelog when toggling visibility on, grandchildren will remain hidden
 @about Toggles the visibility of selected tracks children
 --]]
 
@@ -31,8 +31,10 @@ local function updateChildrenVisiblity(parent, newState)
         local searchTrack = r.GetTrack(PROJECT, i)
         local searchTrackDepth = r.GetTrackDepth(searchTrack)
         if parentDepth == searchTrackDepth then return end
+        if newState == 1 and searchTrackDepth > parentDepth + 1 then goto continue end
         r.SetMediaTrackInfo_Value(searchTrack, "B_SHOWINTCP", newState)
         r.SetMediaTrackInfo_Value(searchTrack, "B_SHOWINMIXER", newState)
+        ::continue::
     end
 end
 
