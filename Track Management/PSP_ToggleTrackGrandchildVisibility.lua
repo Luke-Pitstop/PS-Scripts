@@ -1,10 +1,10 @@
 --[[
 @author Luke Willis
-@version 1.2
+@version 1.0
 @licence GPL v3
 @reaper 6.82
-@changelog updated about
-@about Toggles the visibility of selected tracks children
+@changelog release
+@about Toggles the visibility of selected tracks grandchildren
 --]]
 
 --[[ MAIN ]] --
@@ -31,8 +31,11 @@ local function updateChildrenVisiblity(parent, newState)
         local searchTrack = r.GetTrack(PROJECT, i)
         local searchTrackDepth = r.GetTrackDepth(searchTrack)
         if parentDepth == searchTrackDepth then return end
-        r.SetMediaTrackInfo_Value(searchTrack, "B_SHOWINTCP", newState)
-        r.SetMediaTrackInfo_Value(searchTrack, "B_SHOWINMIXER", newState)
+        if searchTrackDepth ~= (parentDepth + 1) then
+            r.SetMediaTrackInfo_Value(searchTrack, "B_SHOWINTCP", newState)
+            r.SetMediaTrackInfo_Value(searchTrack, "B_SHOWINMIXER", newState)
+            r.ShowConsoleMsg(tostring(newState) .. "\n")
+        end
     end
 end
 
@@ -44,7 +47,7 @@ local function tryToggleVisibility()
         local isFolder = r.GetMediaTrackInfo_Value(track, "I_FOLDERDEPTH") == 1
         if isFolder then
             local trackIndex = r.GetMediaTrackInfo_Value(track, "IP_TRACKNUMBER") - 1
-            updateChildrenVisiblity(track, getNewState(trackIndex))
+            updateChildrenVisiblity(track, getNewState(trackIndex + 1))
             r.SetMediaTrackInfo_Value(track, "I_FOLDERCOMPACT", 0)
         end
     end
